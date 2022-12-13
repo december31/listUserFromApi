@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ListUserFromApi</string>
+    <string name="demonstrate_text">Demonstrate Text</string>
+    <string name="title">Users List</string>
+    <string name="font">sans-serif-condensed-medium</string>
+    <string name="subtext_font">sans-serif-condensed</string>
+    <string name="background_image">backgound image</string>
+    <string name="cancel">cancel</string>
+    <string name="edit">edit</string>
+</resources>

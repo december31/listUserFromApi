@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/backgroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@string/background_image"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="38dp"
+            android:src="@drawable/bg" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avt"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Button" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:background="@color/background">
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/demonstrate_text"
+            android:textColor="@color/foreground"
+            android:textSize="28sp"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="22sp"
+            android:background="@null"
+            android:focusable="false"
+            android:textStyle="bold"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            tools:ignore="NestedWeights">
+            <LinearLayout
+                android:id="@+id/userDetails"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="22dp"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                tools:ignore="UselessParent">
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"/>
+
+                <Button
+                    android:id="@+id/editBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@+id/cancelBtn"
+                    android:text="@string/edit" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
